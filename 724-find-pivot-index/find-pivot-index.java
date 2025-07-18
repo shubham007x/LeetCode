@@ -1,6 +1,5 @@
 class Solution {
     public int pivotIndex(int[] nums) {
-        int ans = -1;
         int[] pre = new int[nums.length];
         int[] post = new int[nums.length];
 
@@ -14,13 +13,13 @@ class Solution {
         for (int i = nums.length - 2; i >= 0; i--) {
             post[i] = post[i + 1] + nums[i];
         }
-        for (int i = 0; i < nums.length; i++) {
-            System.out.print(pre[i] + " ");
-        }
-        System.out.println();
-        for (int i = 0; i < nums.length; i++) {
-            System.out.print(post[i] + " ");
-        }
+        // for (int i = 0; i < nums.length; i++) {
+        //     System.out.print(pre[i] + " ");
+        // }
+        // System.out.println();
+        // for (int i = 0; i < nums.length; i++) {
+        //     System.out.print(post[i] + " ");
+        // }
 
         for (int i = 0; i < nums.length; i++) {
             int leftSum = (i == 0) ? 0 : pre[i - 1];
@@ -30,6 +29,6 @@ class Solution {
                 return i;
             }
         }
-        return ans;
+        return -1;
     }
 }
