@@ -18,7 +18,7 @@ class Solution {
                 }
                 int k = Integer.parseInt(kStr.toString());
                 String str1 = str.repeat(k);
-                System.out.println(k);
+
 
                 int i = str1.length() - 1;
                 while (i >= 0) {
