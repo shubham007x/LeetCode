@@ -4,7 +4,7 @@ class Solution {
         int k = 0;
 
         for (int x : nums) {
-            if (k < 2 || nums[k - 2] != x) {
+            if (k ==0||k==1 || nums[k - 2] != x) {
 
                 nums[k] = x;
                 k++;
